@@ -32,7 +32,10 @@ table, th, td {
 
   table {
     text-align: left;
-    margin-left: 35%;
+    width: 75%;
+    margin-left: 12.5%;
+    margin-bottom: 40px;
+    margin-top: 20px;
   }
 
   th {
@@ -44,6 +47,10 @@ table, th, td {
     width: 75%;
     margin-left: 12.5%;
     margin-bottom: 40px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 11px;
+    padding-right: 11px;
   }
 
   #drugi {
@@ -51,6 +58,10 @@ table, th, td {
     width: 75%;
     margin-left: 12.5%;
     margin-bottom: 40px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 11px;
+    padding-right: 11px;
   }
   #opis {
     width: 75%;
@@ -58,7 +69,7 @@ table, th, td {
   }
 
   img {
-    width: 300px;
+    width: 100px;
   }
 
   a {
@@ -75,7 +86,7 @@ table, th, td {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    width: 200px;
+    /*width: 200px;*/
     background-color: #f1f1f1;
   }
   
@@ -112,18 +123,119 @@ table, th, td {
     left: 180px;
 }
 
+header {
+  grid-area: header;
+}
+
+.kolumna1 {
+  grid-area: kolumna1;
+}
+
+.kolumna2 {
+  grid-area: kolumna2;
+}
+
+footer {
+  grid-area: footer;
+}
+
 .cards {
-  max-width: 1200px;
-  margin: 0 auto;
+  width: 75%;
+  margin-left: 12.5%;
   display: grid;
-  grid-gap: 1rem;
+  grid-template-areas: 
+  "header header header"
+  "menu kolumna1 kolumna2"
+  "footer footer footer"
+  ;
 }
 
-@media (min-width: 600px) {
-  .cards { grid-template-columns: repeat(2, 1fr); }
+.menu {
+  grid-area: menu;
+  width: 200px;
 }
 
+form {
+  width: 75%;
+  margin-left: 12.5%;
+  margin-bottom: 40px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 11px;
+  padding-right: 11px;
+}
+
+@media (max-width: 600px) {
+  .cards {
+    grid-template-areas: 
+  "header"
+  "menu"
+  "kolumna1"
+  "kolumna2"
+  "footer";
+  width: 100%;
+
+  }
+  .menu {
+    width: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
+    text-align: center;
+  }
+  .footer {
+    width: 100%;
+  }
+  .kolumna1 {
+    width: 100%;
+  }
+}
+
+@media (min-width:600px) and (max-width: 900px){
+.cards {
+  grid-template-areas: 
+"header header"
+"menu menu"
+"kolumna1 kolumna2"
+"footer footer";
+width: 100%;
+}
+.menu {
+  width: 100%;
+  margin-left: 0px;
+  margin-right: 0px;
+  text-align: center;
+}
+.footer {
+  width: 100%;
+}
+}
+
+/*
 @media (min-width: 900px) {
   .cards { grid-template-columns: repeat(3, 1fr); }
+}*/
+
+tr.canceled {
+  background-color: #a13535;
 }
 
+tr.delayed {
+  background-color: #e4802f;
+}
+
+tr.delay {
+  background-color: #e4e14d;
+}
+
+div#powodzenie {
+  position: fixed;
+  font-size: xx-large;
+  width: 90%;
+  height: 90%;
+  bottom: 5%;
+  right: 5%;
+  opacity: 90%;
+  text-align: center;
+  background-color: greenyellow;
+  padding: 10px;
+}

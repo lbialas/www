@@ -20,9 +20,10 @@
           </ul>
     </nav>
 </div>
+<header>Lista lotów <img id="logo" src="logo.jpg" alt="logo firmy"></header>
 <div class="kolumna1">
-    <header>Lista lotów</header>
-        <img id="logo" src="logo.jpg" alt="logo firmy">
+    
+        
         <p id="pierwszy">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus laoreet nunc sodales, placerat massa eu, eleifend elit. Quisque interdum efficitur odio ut tincidunt. Integer mattis lacus mi, venenatis ornare augue interdum eget. Sed luctus nisi id nisl congue, eu dapibus justo pulvinar. Maecenas in fermentum orci, eu ullamcorper ligula. Duis et elit augue. Integer suscipit urna ex, eu consectetur velit dictum vitae. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Integer dictum ex sapien, eget sollicitudin velit sodales ac. Donec eu lectus justo. Cras sollicitudin, turpis nec porta vehicula, ligula tortor fringilla quam, a tempus tellus diam sit amet enim.</p>
         <p id="drugi">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus laoreet nunc sodales, placerat massa eu, eleifend elit. Quisque interdum efficitur odio ut tincidunt. Integer mattis lacus mi, venenatis ornare augue interdum eget. Sed luctus nisi id nisl congue, eu dapibus justo pulvinar. Maecenas in fermentum orci, eu ullamcorper ligula. Duis et elit augue. Integer suscipit urna ex, eu consectetur velit dictum vitae. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Integer dictum ex sapien, eget sollicitudin velit sodales ac. Donec eu lectus justo. Cras sollicitudin, turpis nec porta vehicula, ligula tortor fringilla quam, a tempus tellus diam sit amet enim.</p>
         <table>
@@ -116,23 +117,23 @@
             <th>Data</th>
             <th>Opóźnienie</th>
         </tr>
-        <tr>
+        <tr class="canceled">
             <td>Poznań</td>
             <td>Radom</td>
             <td>12.03.20</td>
-            <td>10 min</td>
+            <td>Odwołany</td>
         </tr>
-        <tr>
+        <tr class="delayed">
             <td>Poznań</td>
             <td>Radom</td>
             <td>12.03.20</td>
-            <td>10 min</td>
+            <td>140 min</td>
         </tr>
-        <tr>
+        <tr class="delay">
             <td>Poznań</td>
             <td>Radom</td>
             <td>12.03.20</td>
-            <td>10 min</td>
+            <td>20 min</td>
         </tr>
     </table>
 
@@ -150,9 +151,9 @@
             <option value="Warszawa" selected>Warszwa</option>
             <option value="Poznań">Poznań</option>
             <option value="Radom">Radom</option>
-        </select>
+        </select><br>
         <label for="imie">Imię i nazwisko:</label>
-        <input type="text" id="imie" name="imie">
+        <input type="text" id="imie" name="imie"><br>
         <label for="datea">Data lotu:</label>
         <input type="date" id="datea" name="date">
         <input type="submit" value="Rezerwuj">
@@ -160,6 +161,7 @@
     </form>
 </div>
     </div>
+    
     <footer>by Łukasz Białas</footer>
 </body>
 </html>
